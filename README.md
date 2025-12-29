@@ -16,6 +16,7 @@ Foram aplicados conceitos fundamentais de estruturação de páginas web, separa
 
 ## 🗂️ Estrutura do Projeto
 
+```
 📁 projeto-clinica
 │
 ├── index.html        # Página Principal
@@ -24,7 +25,7 @@ Foram aplicados conceitos fundamentais de estruturação de páginas web, separa
 ├── contato.html      # Página de Contato
 ├── base.css          # Estilos do site
 └── images/           # Imagens utilizadas no site
-
+``` 
 ---
 
 ## 🧭 Páginas do Site
