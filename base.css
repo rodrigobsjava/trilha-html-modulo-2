@@ -1,38 +1,167 @@
-html, body {
+/* RESET */
+* {
     margin: 0;
-}
-body {
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* MENU */
 .wrapper {
-    width: 500px;
-    display: flex;
-    margin: 0 auto;
-    background-color: aquamarine;
-}
-.main {
-    display: flex;
-    flex-flow: column;
-    width: 85%;
-}
-.menu {
-    width: 15%;
-    background-color: aqua;
-    padding: 10px 20px 0px;
-}
-.header {
-    background-color: rgb(5, 108, 108);
-    min-height: 150px;
-}
-.content {
-    background-color: white;
-    min-height: 300px;
+    width: 200px;
+    background-color: #0d6efd;
     padding: 20px;
 }
+
+.wrapper ul {
+    list-style: none;
+}
+
+.wrapper li {
+    margin-bottom: 15px;
+}
+
+.wrapper a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+}
+
+.wrapper a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+/* CONTENT */
+.content {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.content h1 {
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* FORM */
+form {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: #0d6efd;
+    color: white;
+}
+
+form button[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* FOOTER */
 .footer {
-    background-color: rgb(99, 56, 240);
-    min-height: 150px;
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* RESPONSIVO SIMPLES */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .wrapper ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main {
+        margin-top: 100px;
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
 }
